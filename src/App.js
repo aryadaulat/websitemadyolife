@@ -1,21 +1,25 @@
 import React from 'react'
-import Analytics from './components/Analytics'
-import Cards from './components/Cards'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import NewsLetter from './components/NewsLetter'
-
+import HomePage from './Pages/Homepage'
+import Login from './Pages/Login'
+import Auth from './Pages/Auth'
+import { Amplify } from 'aws-amplify';
+import awsExports from './aws-exports';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+Amplify.configure(awsExports);
 function App() {
   return (
-    <div>
-			<Navbar/>
-			<Hero/>
-			<Analytics/>
-			<NewsLetter/>
-			<Cards/>
-			<Footer/>
-    </div>
+      <Router>       
+        <Routes>
+            <Route path="/" element={<HomePage />} />
+						<Route path="/Login" element={<Login/>} />     
+						<Route path="/Auth" element={<Auth/>} />        
+        </Routes>     
+      </Router>
+
   );
 }
 

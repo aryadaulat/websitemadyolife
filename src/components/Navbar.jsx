@@ -1,34 +1,57 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link, animateScroll as scroll } from 'react-scroll'
+import { useAuthenticator } from "@aws-amplify/ui-react";
+import { Auth } from 'aws-amplify';
+import { Link as Pindah} from "react-router-dom";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
+  const [navi, setNavi] = useState(false);
 
+  // const [cek, setCek] = useState(false);
   const handleNav = () => {
-    setNav(!nav);
+    setNavi(!navi);
+  };
+  const login = () => {
+    // setCek(!cek);
+    alert("Login");
   };
   return (
-    <div className=" flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white">
-      <h1 className="w-full text-3xl font-bold text-[#00df9a]">MadyOLife.</h1>
-      <ul className="hidden md:flex">
-        <li className="p-4">Home</li>
-        <li className="p-4">Company</li>
-        <li className="p-4">Resource</li>
-        <li className="p-4">About</li>
-        <li className="p-4">Contact</li>
+    <div name='home' className="flex w-full justify-between items-center h-[12vh]  mx-auto mt-14 px-4 fixed text-white z-10 bg-zinc-800 drop-shadow-lg">
+      <h1 className="text-3xl font-bold mx-4 mt-7 text-[#00df9a]">MadyOLife.</h1>
+      <ul className="hidden md:flex mt-7">
+        <li><Link to='Company' smooth={true} offset={50} duration={500}>Home</Link></li>
+        <li><Link to='analytics' smooth={true} offset={50} duration={500}>Analytics</Link></li>
+				<li><Link to='price' smooth={true} offset={50} duration={500}>Price</Link></li>
+        <li><Link to='about' smooth={true} offset={50} duration={500}>About</Link></li>
       </ul>
-      <div onClick={handleNav} className='block md:hidden'>
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+      <div className='hidden md:flex mt-7'>
+        <button className='border-none bg-transparent text-white pr-4'> <Pindah to="/Login">Sign In</Pindah></button>
+				<button className='border-none bg-transparent text-white pr-4'>Sign Up</button>
       </div>
-      <div className={nav ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500" :"fixed left-[-100%]"}>
-        <h1 className="w-full text-3xl font-bold text-[#00df9a]">React.</h1>
+      <div onClick={handleNav} className="block md:hidden mt-7">
+        {navi ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+      </div>
+      <div
+        className={
+          navi
+            ? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900  ease-in-out duration-500"
+            : "fixed left-[-100%] "
+        }
+      >
+        <div className='bg-[#000300]'>
+				<h1 className="w-full text-3xl font-bold text-[#00df9a]">MadyOLife.</h1>
         <ul className="uppercase p-4">
-          <li className="p-4 border-b border-gray-600">Home</li>
-          <li className="p-4 border-b border-gray-600">Company</li>
-          <li className="p-4 border-b border-gray-600">Resource</li>
-          <li className="p-4 border-b border-gray-600">About</li>
-          <li className="p-4">Contact</li>
-        </ul>
+          <li className="p-4 border-b border-gray-600"><Link to='Company' smooth={true} offset={50} duration={500}>Home</Link></li>
+          <li className="p-4 border-b border-gray-600"><Link to='analytics' smooth={true} offset={50} duration={500}>Analytics</Link></li>
+          <li className="p-4 border-b border-gray-600"><Link to='price' smooth={true} offset={50} duration={500}>Price</Link></li>
+					<li className="p-4 border-b border-gray-600"><Link to='about' smooth={true} offset={50} duration={500}>About</Link></li>
+          <div className='flex flex-col my-4'>
+       		 <button className='bg-transparent px-8 py-3 mb-4'>Sign In</button>
+						<button className='px-8 py-3 mb-4'>Sign Up</button>
+      		</div>
+        </ul>				
+				</div>
       </div>
     </div>
   );
