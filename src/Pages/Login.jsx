@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { Amplify,Auth } from 'aws-amplify';
+import { Amplify } from 'aws-amplify';
 import { Authenticator,View,Image,useTheme,Text,Heading,Button,useAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from '../aws-exports';
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 import { Link as Pindah} from "react-router-dom";
 import Cards from '../components/Cards'
 import Footer from '../components/Footer'

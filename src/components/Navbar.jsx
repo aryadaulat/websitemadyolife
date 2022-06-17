@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link, animateScroll as scroll } from 'react-scroll'
-import { useAuthenticator } from "@aws-amplify/ui-react";
-import { Auth } from 'aws-amplify';
+import { Link } from 'react-scroll'
 import { Link as Pindah} from "react-router-dom";
 
 const Navbar = () => {
@@ -12,10 +10,7 @@ const Navbar = () => {
   const handleNav = () => {
     setNavi(!navi);
   };
-  const login = () => {
-    // setCek(!cek);
-    alert("Login");
-  };
+
   return (
     <div name='home' className="flex w-full justify-between items-center h-[12vh]  mx-auto mt-14 px-4 fixed text-white z-10 bg-zinc-800 drop-shadow-lg">
       <h1 className="text-3xl font-bold mx-4 mt-7 text-[#00df9a]">MadyOLife.</h1>
