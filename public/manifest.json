@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "MadyOLife",
+  "name": "Change YourSelf, Change Your Life",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "madyolife.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "LogoMadyOLife.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "madyolife.png",
       "type": "image/png",
       "sizes": "512x512"
     }
