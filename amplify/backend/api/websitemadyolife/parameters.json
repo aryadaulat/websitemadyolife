@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "websitemadyolife",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2022-06-19T03:10:58.552Z"
+}
