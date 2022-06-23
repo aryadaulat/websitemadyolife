@@ -274,8 +274,9 @@ export default function Login() {
         <li><Link to='about' smooth={true} offset={50} duration={500}>About</Link></li>
       </ul>
       <div className='hidden md:flex mt-7'>
-			<h1>Hello {user.username}</h1>
+			<h1 className='mr-3'>Welcome To MadyOLife </h1>
         {/* <button className='border-none bg-transparent text-white pr-4'> <Pindah to="/Login">Sign In</Pindah></button> */}
+				<button className='border-none bg-transparent text-white pr-4'><Pindah to="/EditProfile"> Profile</Pindah></button>
 				<button className='border-none bg-transparent text-white pr-4' onClick={signOut}><Pindah to="/"> Logout</Pindah></button>
       </div>
       <div onClick={handleNav} className="block md:hidden mt-7">

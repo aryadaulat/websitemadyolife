@@ -3,7 +3,7 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from 'react-scroll'
 import { Link as Pindah} from "react-router-dom";
 
-const Navbar = () => {
+const NavbarLogin = () => {
   const [navi, setNavi] = useState(false);
 
   // const [cek, setCek] = useState(false);
@@ -12,16 +12,11 @@ const Navbar = () => {
   };
 
   return (
-    <div name='home' className="flex w-full justify-between items-center h-[12vh]  mx-auto mt-14 px-4 fixed text-white z-10 bg-zinc-800 drop-shadow-lg">
+    <div name='home' className="flex w-full justify-between items-center h-[12vh]  mx-auto px-4 text-white z-10 bg-zinc-800 drop-shadow-lg">
       <h1 className="text-3xl font-bold mx-4 mt-7 text-[#00df9a]">MadyOLife.</h1>
-      <ul className="hidden md:flex mt-7">
-        <li><Link to='Company' smooth={true} offset={50} duration={500}>Home</Link></li>
-        <li><Link to='analytics' smooth={true} offset={50} duration={500}>Analytics</Link></li>
-				<li><Link to='price' smooth={true} offset={50} duration={500}>Price</Link></li>
-        <li><Link to='about' smooth={true} offset={50} duration={500}>About</Link></li>
-      </ul>
+      <button className='border-none bg-transparent text-white pr-4'><Pindah to="/Login">Home</Pindah></button>
       <div className='hidden md:flex mt-7'>
-        <button className='border-none bg-transparent text-white pr-4'> <Pindah to="/Login">Sign In</Pindah></button>
+        <button className='border-none bg-transparent text-white pr-4'> <Pindah to="/EditProfile">Profile</Pindah></button>
 				{/* <button className='border-none bg-transparent text-white pr-4'>Sign Up</button> */}
       </div>
       <div onClick={handleNav} className="block md:hidden mt-7">
@@ -52,4 +47,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarLogin;
