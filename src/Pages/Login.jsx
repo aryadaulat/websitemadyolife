@@ -270,7 +270,7 @@ export default function Login() {
       <h1 className="text-3xl font-bold mx-4 mt-7 text-[#00df9a]">MadyOLife.</h1>
       <ul className="hidden md:flex mt-7">
         <li><Link to='Company' smooth={true} offset={50} duration={500}>Home</Link></li>
-        <li><Link to='analytics' smooth={true} offset={50} duration={500}>Analytics</Link></li>
+        <li><Link to='3DAnimation' smooth={true} offset={50} duration={500}>3DAnimation</Link></li>
 				<li><Link to='price' smooth={true} offset={50} duration={500}>Price</Link></li>
         <li><Link to='about' smooth={true} offset={50} duration={500}>About</Link></li>
       </ul>
