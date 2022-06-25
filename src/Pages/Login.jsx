@@ -12,6 +12,7 @@ import Hero from '../components/Hero'
 import NewsLetter from '../components/NewsLetter'
 import Analytics from '../components/Analytics'
 import Logo from '../assets/LogoMadyOLife.png'
+import Virtual3DRoom from '../components/Virtual3DRoom'
 Amplify.configure(awsExports);
 
 const components = {
@@ -306,7 +307,7 @@ export default function Login() {
     </div>
 		<div>
 		<Hero/>
-		<Analytics/>
+		<Virtual3DRoom/>
 		<NewsLetter/>
 		<Cards/>
 		<Footer/>
