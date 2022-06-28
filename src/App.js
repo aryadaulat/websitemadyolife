@@ -3,7 +3,7 @@ import HomePage from './Pages/Homepage'
 import Login from './Pages/Login'
 import Auth from './Pages/Auth'
 import EditProfile from './Pages/Editprofile'
-import { Amplify } from 'aws-amplify';
+import { Amplify,Analytics  } from 'aws-amplify';
 import awsExports from './aws-exports';
 import {
   BrowserRouter as Router,
@@ -11,6 +11,7 @@ import {
   Route,
 } from "react-router-dom";
 Amplify.configure(awsExports);
+Analytics.record({ name: 'albumVisit' });
 function App() {
   return (
       <Router>       

@@ -1,0 +1,21 @@
+{
+    "appName": "websitemadyolife",
+    "roleName": "pinpointLambdaRole0cc09c95",
+    "cloudformationPolicyName": "cloudformationPolicy0cc09c95",
+    "cloudWatchPolicyName": "cloudWatchPolicy0cc09c95",
+    "pinpointPolicyName": "pinpointPolicy0cc09c95",
+    "authPolicyName": "pinpoint_amplify_0cc09c95",
+    "unauthPolicyName": "pinpoint_amplify_0cc09c95",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

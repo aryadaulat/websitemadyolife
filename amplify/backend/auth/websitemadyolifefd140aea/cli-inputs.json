@@ -2,7 +2,7 @@
   "version": "1",
   "cognitoConfig": {
     "identityPoolName": "websitemadyolifefd140aea_identitypool_fd140aea",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "websitfd140aea",
     "userPoolName": "websitemadyolifefd140aea_userpool_fd140aea",
     "autoVerifiedAttributes": [

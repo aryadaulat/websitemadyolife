@@ -16,5 +16,12 @@ export type AmplifyDependentResourcesAttributes = {
             "GraphQLAPIIdOutput": "string",
             "GraphQLAPIEndpointOutput": "string"
         }
+    },
+    "analytics": {
+        "websitemadyolife": {
+            "Region": "string",
+            "Id": "string",
+            "appName": "string"
+        }
     }
 }
