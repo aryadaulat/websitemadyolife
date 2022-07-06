@@ -12,12 +12,12 @@ const Hero = () => {
           Change Yourself, Change Your Life
         </p>
         <h1 className="md:text-7xl sm:text-6xl text-4xl font-bold md:py-6">
-          Grow With MadyOLife
+          Grow with MadyOLife
         </h1>
         <div className="flex justify-center items-center ">
           <div>
 					<p className="md:text-5xl sm:text-4xl text-xl font-bold py-4">
-            Learning Fast, Flexibel Learning for
+            Learning Fast, Flexible Learning for
           </p>
           <Typed
             className="md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2 text-[#00df9a]"
