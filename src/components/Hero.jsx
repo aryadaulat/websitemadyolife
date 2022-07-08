@@ -28,7 +28,7 @@ const Hero = () => {
           />
 					</div>
         </div>
-				<p className="md:text-2xl text-xl font-bold text-gray-500">Monitor your Knowladge</p>
+				<p className="md:text-2xl text-xl font-bold text-gray-500">Monitor your Knowledge</p>
 				<button 
 				onClick={Getstarted}
 				className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Get Started</button>
